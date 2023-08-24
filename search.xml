@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-  <ShortName>Pokémon Stuff</ShortName>
-  <Description>Search among Pokémon in Pokémon Stuff</Description>
+  <ShortName>DexSearch</ShortName>
+  <Description>Search among Pokémon in your collection.</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Url type="text/html" template="https://armienn.github.io/pokemon/#{searchTerms}">
+  <Url type="text/html" template="https://okwurt.github.io/dextest/#{searchTerms}">
   </Url>
 </OpenSearchDescription>
