@@ -1,16 +1,16 @@
-import { SearchSite } from "../../archive/search/search-site.js"
-import { update, setRenderFunction, l } from "../../archive/arf/arf.js"
-import { CollectionSetup } from "../../archive/search/collection-setup.js"
-import { ExportView } from "../../archive/search/export-view.js"
-import { ImportView } from "../../archive/search/import-view.js"
-import { PokemonData, Pokemon } from "./pokemon-data.js"
-import { formName, sprite, typesText, abilitiesText, statText, eggGroupsText, typeText, learnMethodText, IVEVText, ballSprites, movesText, extendedName } from "./pokemon-display.js"
-import { CollectionGroup } from "./local-collection.js"
-import { PokemonView } from "./pokemon-view.js"
-import { getSpreadsheetUrl, loadSheetsFrom } from "./spreadsheet-parser.js"
-import { CollectionEditor } from "./collection-editor.js"
-import { pokemonFromUnsanitised } from "./porting.js"
-import { NewPokemonView } from "./new-pokemon-view.js"
+import { SearchSite } from "src/search-site.js"
+import { update, setRenderFunction, l } from "arf/arf.js"
+import { CollectionSetup } from "src/collection-setup.js"
+import { ExportView } from "src/export-view.js"
+import { ImportView } from "src/import-view.js"
+import { PokemonData, Pokemon } from "src/pokemon-data.js"
+import { formName, sprite, typesText, abilitiesText, statText, eggGroupsText, typeText, learnMethodText, IVEVText, ballSprites, movesText, extendedName } from "src/pokemon-display.js"
+import { CollectionGroup } from "src/local-collection.js"
+import { PokemonView } from "src/pokemon-view.js"
+import { getSpreadsheetUrl, loadSheetsFrom } from "src/spreadsheet-parser.js"
+import { CollectionEditor } from "src/collection-editor.js"
+import { pokemonFromUnsanitised } from "src/porting.js"
+import { NewPokemonView } from "src/new-pokemon-view.js"
 
 window.onload = function () {
 	var site = new SearchSite()
@@ -18,7 +18,7 @@ window.onload = function () {
 	var stuff = new PokemonStuff(site)
 	window.stuff = stuff
 	site.header = "Pokémon Stuff"
-	site.sections.header.url = "https://armienn.github.com/pokemon"
+	site.sections.header.url = "https://okwurt.github.com/dextest"
 	//site.sections.navigation.navigationEntries = () => stuff.navThing()
 	site.sections.navigation.navigationSetup = () => stuff.navThing()
 	setRenderFunction(() => site.render())
@@ -32,7 +32,7 @@ function pokemonCollectionSetup() {
 	setup.add("sprite", "Sprite", { value: p => sprite(p) }, false, "id")
 	setup.add("id", "ID")
 	setup.add("name", "Name")
-	setup.add("form", "Form", {}, { options: ["Base", "Alola", "Mega"] })
+	setup.add("form", "Form", {}, { options: ["Base", "Mega", "Alola", "Galar", "Hisui", "Paldea"] })
 	setup.add("name+form", "Pokémon", { value: formName, data: p => p.name + (p.form == "Base" ? "" : " (" + p.form + ")") }, false, "name")
 	setup.add("types", "Types", { value: typesText }, { options: stuff.data.typeNames, restricted: true })
 	setup.add("abilities", "Abilities", { value: abilitiesText }, { options: Object.keys(stuff.data.abilities) })
