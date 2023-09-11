@@ -2,8 +2,8 @@
 
 class HeaderSection {
 	constructor() {
-		this.title = "Pokémon Stuff"
-		this.titleLink = "https://github.com/Armienn/pokemon#pok%C3%A9mon-stuff"
+		this.title = "Dex Tracker"
+		this.titleLink = "https://github.com/okwurt/dextracker"
 		this.subtitle = ""
 		this.showLocal = true
 
