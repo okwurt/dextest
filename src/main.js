@@ -1,23 +1,23 @@
-import { SearchSite } from "src/search-site.js"
-import { update, setRenderFunction, l } from "arf/arf.js"
-import { CollectionSetup } from "src/collection-setup.js"
-import { ExportView } from "src/export-view.js"
-import { ImportView } from "src/import-view.js"
-import { PokemonData, Pokemon } from "src/pokemon-data.js"
-import { formName, sprite, typesText, abilitiesText, statText, eggGroupsText, typeText, learnMethodText, IVEVText, ballSprites, movesText, extendedName } from "src/pokemon-display.js"
-import { CollectionGroup } from "src/local-collection.js"
-import { PokemonView } from "src/pokemon-view.js"
-import { getSpreadsheetUrl, loadSheetsFrom } from "src/spreadsheet-parser.js"
-import { CollectionEditor } from "src/collection-editor.js"
-import { pokemonFromUnsanitised } from "src/porting.js"
-import { NewPokemonView } from "src/new-pokemon-view.js"
+import { SearchSite } from "/src/search-site.js"
+import { update, setRenderFunction, l } from "/src/arf.js"
+import { CollectionSetup } from "/src/collection-setup.js"
+import { ExportView } from "/src/export-view.js"
+import { ImportView } from "/src/import-view.js"
+import { PokemonData, Pokemon } from "/src/pokemon-data.js"
+import { formName, sprite, typesText, abilitiesText, statText, eggGroupsText, typeText, learnMethodText, IVEVText, ballSprites, movesText, extendedName } from "/src/pokemon-display.js"
+import { CollectionGroup } from "/src/local-collection.js"
+import { PokemonView } from "/src/pokemon-view.js"
+import { getSpreadsheetUrl, loadSheetsFrom } from "/src/spreadsheet-parser.js"
+import { CollectionEditor } from "/src/collection-editor.js"
+import { pokemonFromUnsanitised } from "/src/porting.js"
+import { NewPokemonView } from "/src/new-pokemon-view.js"
 
 window.onload = function () {
 	var site = new SearchSite()
 	window.site = site
 	var stuff = new PokemonStuff(site)
 	window.stuff = stuff
-	site.header = "Pokémon Stuff"
+	site.header = "UltraDex"
 	site.sections.header.url = "https://okwurt.github.com/dextest"
 	//site.sections.navigation.navigationEntries = () => stuff.navThing()
 	site.sections.navigation.navigationSetup = () => stuff.navThing()

@@ -3,7 +3,7 @@
 class HeaderSection {
 	constructor() {
 		this.title = "Dex Tracker"
-		this.titleLink = "https://github.com/okwurt/dextracker"
+		this.titleLink = "https://github.com/okwurt/dextest"
 		this.subtitle = ""
 		this.showLocal = true
 
