@@ -1,4 +1,4 @@
-import { Component, l, update } from "../arf/arf.js"
+import { Component, l, update } from "./arf.js"
 
 export class ImportView extends Component {
 	constructor(site, onImport) {

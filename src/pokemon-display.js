@@ -1,4 +1,4 @@
-import { l, Component } from "../../archive/arf/arf.js"
+import { l, Component } from "./arf.js"
 
 export function formName(pokemon) {
 	switch (pokemon.form) {

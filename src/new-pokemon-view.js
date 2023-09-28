@@ -1,5 +1,5 @@
-import { Component, update, l } from "../../archive/arf/arf.js"
-import iconButton, { acceptIcon, crossIcon } from "../../archive/search/icons.js"
+import { Component, update, l } from ".arf.js"
+import iconButton, { acceptIcon, crossIcon } from ".icons.js"
 import { Pokemon } from "./pokemon-data.js"
 import { imageName } from "./pokemon-display.js";
 

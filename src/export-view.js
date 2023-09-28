@@ -1,4 +1,4 @@
-import { Component, l, update } from "../arf/arf.js"
+import { Component, l, update } from "./arf.js"
 import { stringFrom } from "./util.js"
 
 export class ExportView extends Component {

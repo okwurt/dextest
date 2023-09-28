@@ -1,4 +1,4 @@
-import { DataStore } from "../../archive/search/data-store.js"
+import { DataStore } from "./data-store.js"
 
 export class Pokemon {
 	constructor(pokemon) {

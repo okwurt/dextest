@@ -1,7 +1,6 @@
 import { CollectionGroup } from "./local-collection.js"
-import { objectsFromTable } from "../../archive/search/porting.js"
+import { objectsFromTable, pokemonFromUnsanitised } from "./porting.js"
 import { requestJSON } from "./main.js"
-import { pokemonFromUnsanitised } from "./porting.js"
 
 export function loadSheetsFrom(spreadsheet) {
 	stuff.collectorInfo.spreadsheetId = spreadsheet.id

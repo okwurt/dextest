@@ -1,16 +1,16 @@
-import { SectionHeader } from "./header-section.js"
+import { HeaderSection } from "/static/header-section.js"
 import { SectionNavigation } from "./section-navigation.js"
 import { SectionSelection } from "./section-selection.js"
-import { Component, l, update, clearStylesheets } from "../arf/arf.js"
+import { Component, l, update, clearStylesheets } from "./arf.js"
 import { CollectionView } from "./collection-view.js"
 import { Styling } from "./styling.js"
-import { toJSON, toMarkdown, toXSV, fromJSON, fromXSV, fromMarkdown, detectJSON, detectXSV } from "./porting.js"
+import { exportJSON, toMarkdown, toXSV, importJSON, fromXSV, fromMarkdown, detectJSON, detectXSV } from "./porting.js"
 
 export class SearchSite extends Component {
 	constructor() {
 		super()
 		this.sections = {
-			header: new SectionHeader(this),
+			header: new HeaderSection(this),
 			navigation: new SectionNavigation(this),
 			selection: new SectionSelection(this),
 			collection: new CollectionView(
@@ -28,13 +28,13 @@ export class SearchSite extends Component {
 		this.shownView = null
 		this.collectionSetups = {}
 		this.exportMethods = {
-			JSON: toJSON,
+			JSON: (collection, fields) => exportJSON(collection, fields),
 			CSV: (collection, fields) => toXSV(collection, fields, ","),
 			TSV: (collection, fields) => toXSV(collection, fields, "\t"),
 			Markdown: toMarkdown
 		}
 		this.importMethods = {
-			JSON: fromJSON,
+			JSON: (data) => importJSON(data),
 			CSV: (data) => fromXSV(data, ","),
 			TSV: (data) => fromXSV(data, "\t"),
 			Markdown: fromMarkdown

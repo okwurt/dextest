@@ -1,5 +1,5 @@
-import { Component, update, l } from "../../archive/arf/arf.js"
-import iconButton, { acceptIcon, crossIcon, deleteIcon } from "../../archive/search/icons.js"
+import { Component, update, l } from "./arf.js"
+import iconButton, { acceptIcon, crossIcon, deleteIcon } from "./icons.js"
 
 export class CollectionEditor extends Component {
 	constructor(title, onSave, onCancel, onDelete) {

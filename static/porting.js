@@ -458,7 +458,7 @@ stuff.collection.saveLocalTabs()`
 
 	static fullExportScript() {
 		var output = `stuff.collection.collectorName = "Unknown"
-stuff.collection.collectorUrl = "https://armienn.github.io/pokemon"
+stuff.collection.collectorUrl = "https://okwurt.github.io/dextest"
 stuff.collection.collectorFriendCode = "?"
 var tabs = {`
 		for (var i in stuff.collection.local) {
